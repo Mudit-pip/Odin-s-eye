@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "82738816421",
+    "project_id": "odin-s-eye-3392b",
+    "storage_bucket": "odin-s-eye-3392b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82738816421:android:1db52a70b1fc8a24abf44c",
+        "android_client_info": {
+          "package_name": "com.odinseye"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82738816421-8rnp1detsip13am4u9armei2c2ievmer.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.odinseye",
+            "certificate_hash": "728f15e45ed416ee57e625a9d8b2396cefca2201"
+          }
+        },
+        {
+          "client_id": "82738816421-1rvrv9vold7209fgigpmvi9h2qlc8e6u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAssIKgJF3zQaLXB_OxYLn1ErGymXW1qE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82738816421-1rvrv9vold7209fgigpmvi9h2qlc8e6u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".E1_afterlogin">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/E1_profilepic"
+        android:layout_width="180px"
+        android:layout_height="180px"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></de.hdodenhof.circleimageview.CircleImageView>
+
+    <LinearLayout
+        android:id="@+id/e1_lay_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/test"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/E1_profilepic">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Score: "
+            android:textSize="25dp"></TextView>
+
+        <TextView
+            android:id="@+id/E1_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:textSize="25dp"></TextView>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/E1_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/test"
+        app:layout_constraintBottom_toTopOf="@id/e1_unlock_next_quest"
+        app:layout_constraintTop_toBottomOf="@id/e1_lay_score"></ListView>
+
+    <TextView
+        android:id="@+id/e1_unlock_next_quest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:gravity="center"
+        android:text="Unlock Next Quest"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@id/E1_qrbtn"></TextView>
+
+
+    <ImageView
+        android:src="@drawable/qrcodebtn"
+        android:id="@+id/E1_qrbtn"
+        android:layout_width="160px"
+        android:layout_height="160px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></ImageView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
