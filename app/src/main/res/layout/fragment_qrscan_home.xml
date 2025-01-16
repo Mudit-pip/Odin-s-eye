@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".fragments.fragment_qrscan_home">
+
+    <LinearLayout
+        android:id="@+id/fragment_qrscan_lay_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/custom_insidecol_quest"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Score: "
+            android:textColor="@color/white"
+            android:textSize="25dp"></TextView>
+
+        <TextView
+            android:id="@+id/fragment_qrcode_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="25dp"></TextView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fragment_qrscan_tetxtview_nondynamic_quests"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70px"
+        android:background="@drawable/test_yellow"
+        android:gravity="center"
+        android:paddingStart="40px"
+        android:paddingEnd="40px"
+        android:text="Quests"
+        android:textColor="@color/md_brown_900"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_qrscan_lay_score"></TextView>
+
+    <LinearLayout
+        android:id="@+id/fragment_qrcode_layout_notdy"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_qrscan_tetxtview_nondynamic_quests">
+
+        <ListView
+            android:id="@+id/fragment_qrcode_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="160px"></ListView>
+
+    </LinearLayout>
+
+
+    <!--    app:layout_constraintBottom_toTopOf="@id/fragment_qrscan_qrbtn"-->
+
+    <!--    <ImageView-->
+    <!--        android:layout_marginRight="5dp"-->
+    <!--        android:layout_marginBottom="15dp"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        android:src="@drawable/scanqr_transparent"-->
+    <!--        android:background="@drawable/test"-->
+    <!--        android:id="@+id/fragment_qrscan_qrbtn"-->
+    <!--        android:layout_width="400px"-->
+    <!--        android:layout_height="140px"></ImageView>-->
+
+    <TextView
+        android:id="@+id/scanbtn_txt"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="Scan QR"
+        android:background="@drawable/test_blue_curved"
+        android:layout_width="400px"
+        android:layout_height="140px"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+    <ProgressBar
+        android:id="@+id/fragment_qrcode_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

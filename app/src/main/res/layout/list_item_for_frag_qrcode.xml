@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginTop="20px"
+        android:padding="8dp"
+        android:background="@drawable/test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/list_item_frag_qrcode_checkbox_img"
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:src="@drawable/uncheckedcheckbox"></ImageView>
+
+        <TextView
+            android:layout_marginLeft="20px"
+            android:id="@+id/list_item_frag_qrcode_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textColor="@color/white"
+            android:textSize="30dp"></TextView>
+
+    </LinearLayout>
+
+
+</LinearLayout>
