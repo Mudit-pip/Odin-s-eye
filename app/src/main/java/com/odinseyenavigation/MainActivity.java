@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseDatabase db;
     DatabaseReference ref;
     GoogleSignInClient gsc;
-    ConstraintLayout loginbtn_conslay;
+    ImageView loginbtn_conslay;
     LinearLayout astroinsta_linearlay;
     ImageView plinth_img;
 
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        loginbtn_conslay = findViewById(R.id.login_contraintlayout);
+        loginbtn_conslay = findViewById(R.id.login_txt_bg);
         astroinsta_linearlay = findViewById(R.id.main_astro_insta);
         plinth_img = findViewById(R.id.main_plinth);
 

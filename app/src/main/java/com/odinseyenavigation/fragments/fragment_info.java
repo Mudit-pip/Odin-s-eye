@@ -61,93 +61,92 @@ public class fragment_info extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_info, container, false);
 
-        profilepic = v.findViewById(R.id.frag_info_profilepic);
-        progressBar = v.findViewById(R.id.fragment_info_progressBar);
-        grid = v.findViewById(R.id.fragment_info_grid);
-        grid_dev = v.findViewById(R.id.fragment_info_grid_devloper);
+//        profilepic = v.findViewById(R.id.frag_info_profilepic);
+//        progressBar = v.findViewById(R.id.fragment_info_progressBar);
+
 
         ////setting names
-        String nam[] = {"Abhinav Singh", "Ansh Chawla", "Palakurthy Guneeth", "Hiya Jain"};
-        String num[] = {"9643271207", "99107 13737", "79933 91140", "97012 34550"};
+//        String nam[] = {"Abhinav Singh", "Ansh Chawla", "Palakurthy Guneeth", "Hiya Jain"};
+//        String num[] = {"9643271207", "99107 13737", "79933 91140", "97012 34550"};
 
-        my_adapter adapter = new my_adapter(getContext(), nam, num);
-        grid.setAdapter(adapter);
+//        my_adapter adapter = new my_adapter(getContext(), nam, num);
+//        grid.setAdapter(adapter);
+//
+//        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Intent intent = new Intent(Intent.ACTION_DIAL);
+//                intent.setData(Uri.parse("tel:"+num[position]));
+//                startActivity(intent);
+//            }
+//        });
 
-        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:"+num[position]));
-                startActivity(intent);
-            }
-        });
-
-        String nam_d[] = {"Mudit Choudhary"};
-        String num_d[] = {"9672467580"};
-
-        my_adapter adapter_d = new my_adapter(getContext(), nam_d, num_d);
-        grid_dev.setAdapter(adapter_d);
-
-        grid_dev.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:9672467580"));
-                startActivity(intent);
-            }
-        });
+//        String nam_d[] = {"Mudit Choudhary"};
+//        String num_d[] = {"9672467580"};
+//
+//        my_adapter adapter_d = new my_adapter(getContext(), nam_d, num_d);
+//        grid_dev.setAdapter(adapter_d);
+//
+//        grid_dev.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Intent intent = new Intent(Intent.ACTION_DIAL);
+//                intent.setData(Uri.parse("tel:9672467580"));
+//                startActivity(intent);
+//            }
+//        });
         ///////////////
 
 
-        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
-        gsc = GoogleSignIn.getClient(getContext(), gso);
-        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getContext());
-        auth = FirebaseAuth.getInstance();
+//        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+//        gsc = GoogleSignIn.getClient(getContext(), gso);
+//        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getContext());
+//        auth = FirebaseAuth.getInstance();
+//
+//        if (acct != null) {
+//            progressBar.setVisibility(View.VISIBLE);
+//            String personName = acct.getDisplayName();
+//            String personEmail = acct.getEmail();
+//            Uri uri = acct.getPhotoUrl();
+//            Picasso.get().load(uri).into(profilepic, new Callback() {
+//                @Override
+//                public void onSuccess() {
+//                    progressBar.setVisibility(View.GONE);
+//                }
+//
+//                @Override
+//                public void onError(Exception e) {
+//                    progressBar.setVisibility(View.GONE);
+//                }
+//            });
+//        }
 
-        if (acct != null) {
-            progressBar.setVisibility(View.VISIBLE);
-            String personName = acct.getDisplayName();
-            String personEmail = acct.getEmail();
-            Uri uri = acct.getPhotoUrl();
-            Picasso.get().load(uri).into(profilepic, new Callback() {
-                @Override
-                public void onSuccess() {
-                    progressBar.setVisibility(View.GONE);
-                }
-
-                @Override
-                public void onError(Exception e) {
-                    progressBar.setVisibility(View.GONE);
-                }
-            });
-        }
-
-        profilepic.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PopupMenu popupMenu = new PopupMenu(getContext(), profilepic);
-                popupMenu.getMenuInflater().inflate(R.menu.accountpopupmenu_forinfo, popupMenu.getMenu());
-
-                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        if (item.getItemId() == R.id.details) {
-                            Intent inte = new Intent(getContext(), E2_accountdetails.class);
-                            inte.putExtra("uri", acct.getPhotoUrl().toString());
-                            inte.putExtra("name", acct.getDisplayName());
-                            inte.putExtra("email", acct.getEmail());
-                            startActivity(inte);
-                        } else if (item.getItemId() == R.id.signout) {
-                            progressBar.setVisibility(View.VISIBLE);
-                            add_data_to_firbase_and_signout();
-                        }
-                        return true;
-                    }
-                });
-
-                popupMenu.show();
-            }
-        });
+//        profilepic.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                PopupMenu popupMenu = new PopupMenu(getContext(), profilepic);
+//                popupMenu.getMenuInflater().inflate(R.menu.accountpopupmenu_forinfo, popupMenu.getMenu());
+//
+//                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+//                    @Override
+//                    public boolean onMenuItemClick(MenuItem item) {
+//                        if (item.getItemId() == R.id.details) {
+//                            Intent inte = new Intent(getContext(), E2_accountdetails.class);
+//                            inte.putExtra("uri", acct.getPhotoUrl().toString());
+//                            inte.putExtra("name", acct.getDisplayName());
+//                            inte.putExtra("email", acct.getEmail());
+//                            startActivity(inte);
+//                        } else if (item.getItemId() == R.id.signout) {
+//                            progressBar.setVisibility(View.VISIBLE);
+//                            add_data_to_firbase_and_signout();
+//                        }
+//                        return true;
+//                    }
+//                });
+//
+//                popupMenu.show();
+//            }
+//        });
 
 
         return v;
