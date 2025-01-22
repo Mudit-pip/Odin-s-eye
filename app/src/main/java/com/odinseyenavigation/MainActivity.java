@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        loginbtn_conslay = findViewById(R.id.main_activity_loginbtn_constraintlayout);
+        loginbtn_conslay = findViewById(R.id.login_contraintlayout);
         astroinsta_linearlay = findViewById(R.id.main_astro_insta);
         plinth_img = findViewById(R.id.main_plinth);
 

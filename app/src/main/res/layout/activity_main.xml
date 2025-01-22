@@ -4,170 +4,138 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundfigma"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!--    android:background="@drawable/fullbackcanva"-->
 
-    <!--    android:background="@drawable/fullbackcanva"-->
+    <ImageView
+        
+        android:background="@drawable/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ImageView>
 
-    <ProgressBar
-        android:id="@+id/main_progressBar"
+
+    <ImageView
+        android:id="@+id/main_plinth"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="14dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:srcCompat="@drawable/plinth" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/main_logos_pl_astro_nondynamic"
-        android:layout_width="match_parent"
+
+    <LinearLayout
+        android:id="@+id/main_astro_insta"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/main_plinth"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10px"
-            android:src="@drawable/plithfigma"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></ImageView>
-
-        <LinearLayout
-            android:id="@+id/main_astro_insta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10px"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/instafigma"></ImageView>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/astronomylnmiitfigma"></ImageView>
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/main_logos_pl_astro_nondynamic">
-
-        <ImageView
-            android:id="@+id/nondy_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-60px"
-            android:src="@drawable/astrologofigma"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></ImageView>
-
-        <ImageView
-            android:id="@+id/nondy_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/odinseyefigma"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/nondy_1"></ImageView>
-
-        <ImageView
-            android:id="@+id/nondy_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/odinslogo_final"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/nondy_2"></ImageView>
-
-        <ImageView
-            android:id="@+id/nondy_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/embark_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/nondy_3"></ImageView>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/main_activity_loginbtn_constraintlayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/loginfigma"></ImageView>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/logintextfigma"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></ImageView>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_activity_loginbtn_constraintlayout">
-
-
-        <ImageView
+            android:id="@+id/insta_icon"
+            android:layout_width="47dp"
+            android:layout_height="34dp"
             android:layout_gravity="center"
+            app:srcCompat="@drawable/igram" />
+
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/copyright"></ImageView>
-
-        <TextView
             android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="AstronomyClub,LNMIIT"
-            android:textColor="@color/white"></TextView>
-
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/astrtonomylnmiit" />
     </LinearLayout>
 
-    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
+    <ImageView
+        android:id="@+id/title_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="524dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/odins_eye" />
 
-    <!--    <com.google.android.gms.common.SignInButton-->
-    <!--        android:id="@+id/main_signin_btn"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:padding="10dp"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"></com.google.android.gms.common.SignInButton>-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login_contraintlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="592dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/login_txt_bg"
+            android:layout_width="357dp"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/polygon" />
+
+        <TextView
+            android:id="@+id/logo_img"
+            android:layout_width="106dp"
+            android:layout_height="49dp"
+            android:fontFamily="@font/michroma"
+            android:text="LOGIN"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/login_txt_bg"
+            app:layout_constraintEnd_toEndOf="@+id/login_txt_bg"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@+id/login_txt_bg"
+            app:layout_constraintTop_toTopOf="@+id/login_txt_bg"
+            app:layout_constraintVertical_bias="0.105" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/astro_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/astro_club" />
+
+    <ImageView
+        android:id="@+id/astro_club_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/astro_logo"
+        app:layout_constraintStart_toStartOf="@+id/astro_logo"
+        app:srcCompat="@drawable/astro_text" />
+
+    <ImageView
+        android:id="@+id/cc_icon"
+        android:layout_width="24dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/astro_logo"
+        app:layout_constraintEnd_toEndOf="@+id/astro_txt"
+        app:srcCompat="@drawable/c" />
+
+    <ImageView
+        android:id="@+id/astro_txt"
+        android:layout_width="114dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cc_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/astro_" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
